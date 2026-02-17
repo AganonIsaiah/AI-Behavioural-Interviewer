@@ -1,17 +1,9 @@
-import Header from "./components/Header";
-import Camera from "./components/Camera";
-import Transcript from "./components/Transcript";
-import Footer from "./components/Footer";
+import Dashboard from "./components/Dashboard";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
     <div className="flex flex-col h-screen min-w-200!">
-      <Header />
-      <div className="flex-1 flex">
-        <Camera />
-        <Transcript />
-      </div>
-      <Footer />
+        <Dashboard />
     </div>
   );
 }
