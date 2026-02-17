@@ -8,16 +8,16 @@ export default function Footer() {
   const [startInterview, setStartInterview] = useState<boolean>(false);
 
   return (
-    <div className="flex justify-between items-center border-t border-zinc-700 py-3 px-5 text-sm">
+    <div className="flex justify-between items-center border-t ai-border py-3 px-5 text-sm">
       <div className="flex items-center gap-2">
         <span className="bg-gray-400 w-2 h-2 rounded-full"></span>
-        <span className="tabular-nums! font-mono text-gray-400">{timer}</span>
+        <span className="tabular-nums! font-mono ai-text-gray">{timer}</span>
       </div>
 
       <div className="flex items-center gap-5">
         <button
-          onClick={() => setStartInterview(!startInterview)}
-          className="px-2 py-1.5! w-32! whitespace-nowrap! rounded-lg bg-zinc-800 cursor-pointer hover:bg-neutral-800 duration-200 transition-all"
+          onClick={() => setStartInterview(prev => !prev)}
+          className="px-2 py-1.5! w-32! whitespace-nowrap! rounded-lg bg-zinc-800 cursor-pointer hover:bg-neutral-800 transition-all duration-200"
         >
           {!startInterview ? (
             <span className="flex items-center justify-between px-1">

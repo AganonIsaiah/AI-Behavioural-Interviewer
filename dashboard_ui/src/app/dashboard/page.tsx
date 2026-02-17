@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen min-w-200!">
       <Header />
       <div className="flex-1 flex">
         <Camera />

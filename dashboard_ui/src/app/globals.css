@@ -22,7 +22,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
 }
 
 .ai-bg-blue {
@@ -31,4 +33,43 @@ body {
 
 .ai-text-blue {
   color: hsl(217.2, 91.2%, 59.8%);
+}
+
+.ai-text-gray {
+  @apply text-gray-400;
+}
+
+.ai-border {
+  @apply border-zinc-700!;
+}
+
+.login-btn {
+  @apply w-50 py-1.5 px-1.5 rounded-lg shadow-lg cursor-pointer duration-200 transition-all;
+}
+
+.login-enter-btn {
+  @apply p-3 rounded-lg bg-white text-black text-sm font-medium flex justify-center items-center hover:bg-gray-200 cursor-pointer transition-all duration-200;
+}
+
+.login-gradient {
+  background:
+    radial-gradient(
+      ellipse at 30% 40%,
+      hsl(217.2 91.2% 59.8% / 0.22) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 80% 85%,
+      hsl(260 80% 60% / 0.1) 0%,
+      transparent 45%
+    ),
+    linear-gradient(170deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 100%);
+}
+
+h1 {
+  @apply text-3xl! font-bold;
+}
+
+h2 {
+  @apply text-2xl! font-semibold;
 }
