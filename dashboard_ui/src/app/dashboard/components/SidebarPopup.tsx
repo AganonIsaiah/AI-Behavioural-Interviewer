@@ -16,7 +16,7 @@ export default function SidebarPopup() {
       <div
         onClick={toggleSidebar}
         className={`fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 z-40 ${
-          isSidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          isSidebarOpen ? "opacity-50 visible" : "opacity-0 invisible"
         }`}
       />
 
