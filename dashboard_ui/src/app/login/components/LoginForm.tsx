@@ -106,18 +106,18 @@ export default function LoginForm() {
               htmlFor="resume"
               className="font-medium text-sm flex gap-1 mt-2"
             >
-              Upload your Resume <p className="text-gray-400">(PDF)</p>
+              Upload your Resume <p className="text-zinc-500">(PDF)</p>
             </label>
 
             <input
-              className="flex justify-center items-center text-center! h-20 w-full text-sm bg-zinc-800 p-2 rounded-lg cursor-pointer"
+              className="text-zinc-500 flex justify-center items-center text-center! h-18 w-full text-sm bg-zinc-800 p-2 pt-3 pl-3 rounded-lg cursor-pointer"
               type="file"
               id="resume"
               name="resume"
               accept=".pdf"
             />
 
-            <label htmlFor="password" className="font-medium text-sm mt-2">
+            <label htmlFor="password" className="font-medium text-sm mt-1">
               Password
             </label>
 
