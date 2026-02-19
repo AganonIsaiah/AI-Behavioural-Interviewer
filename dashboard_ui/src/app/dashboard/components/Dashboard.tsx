@@ -1,7 +1,7 @@
 "use client"
 
 import Header from "./Header";
-import Camera from "./Camera";
+import Camera from "./Camera/Camera";
 import Transcript from "./Transcript";
 import Footer from "./Footer";
 import SidebarPopup from "./SidebarPopup";

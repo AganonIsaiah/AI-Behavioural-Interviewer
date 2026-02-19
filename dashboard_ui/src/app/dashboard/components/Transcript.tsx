@@ -57,29 +57,17 @@ export default function Transcript() {
 
       <div className="flex-1 overflow-y-auto p-4 space-y-3">
         {messages.map((msg, index) => (
-          <div key={index}>
-            <span
-              className={`flex text-sm font-medium ${
-                msg.sender === "User" ? "justify-end" : "justify-start"
-              }`}
-            >
-              {msg.sender}
+          <div
+            key={index}
+            className="mt-0.5 flex flex-col border ai-border px-3 py-2 rounded-lg"
+          >
+            <span className="flex items-center gap-1.5">
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${msg.sender === "Interviewer" ? "bg-blue-500" : "bg-white"}`}
+              ></span>
+              <p className="text-xs font-mono ai-text-gray">{msg.sender}</p>
             </span>
-            <div
-              className={`mt-0.5 flex ${
-                msg.sender === "User" ? "justify-end" : "justify-start"
-              }`}
-            >
-              <div
-                className={`max-w-[90%] rounded-lg p-2 text-xs ${
-                  msg.sender === "User"
-                    ? "bg-blue-600 text-white"
-                    : "bg-zinc-800 text-zinc-100"
-                }`}
-              >
-                {msg.text}
-              </div>
-            </div>
+            <span className="text-xs mt-1">{msg.text}</span>
           </div>
         ))}
       </div>

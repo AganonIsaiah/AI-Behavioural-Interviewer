@@ -1,3 +1,6 @@
+import UserCamera from "./UserCamera";
+// import AICamera from "./AICamera";
+
 export default function Camera() {
   return (
     <div className="flex flex-col h-full w-full! border-r border-zinc-700">
@@ -9,13 +12,12 @@ export default function Camera() {
       </div>
 
       <div className="flex-1 relative">
-
         <div className="w-full h-full bg-white">
-
+          {/* <AICamera /> */}
         </div>
 
-        <div className="absolute bottom-4 right-4 bg-stone-800 h-50 w-100 rounded-lg! shadow-lg border border-zinc-700">
-
+        <div className="absolute bottom-4 right-4 bg-stone-800 h-50 w-100 rounded-lg! ">
+          <UserCamera />
         </div>
       </div>
     </div>
