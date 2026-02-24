@@ -64,7 +64,10 @@ export default function UserCamera() {
 
       {!visible && <span className="pb-2">Share your camera</span>}
       <button
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer px-3 py-2 bg-stone-800 text-white rounded-lg flex items-center justify-center hover:bg-stone-700 transition-all"
+        className={`
+          absolute  cursor-pointer px-3 py-2 bg-stone-800 text-white rounded-lg flex items-center justify-center hover:bg-stone-700 duration-300 transition-all 
+          ${visible ? "top-4 right-4" : "bottom-4 left-1/2 -translate-x-1/2"}`}
+        
         onClick={toggleCamera}
         title={visible ? "Hide Camera" : "Show Camera"}
       >

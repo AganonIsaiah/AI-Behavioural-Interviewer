@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import { Mail, Lock, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/types/dashboard";
 
 export default function LoginForm() {
   const [showSignIn, setShowSignIn] = useState<boolean>(true);
+  const router = useRouter();
+
+  const handleLoginRedirect = () => router.push(ROUTES.DASHBOARD);
 
   return (
     <div className="border-l ai-border w-3/5 min-w-100 h-screen p-4 flex flex-col items-center justify-center">
@@ -78,7 +83,9 @@ export default function LoginForm() {
               />
             </div>
 
-            <button type="submit" className="mt-6 login-enter-btn">
+            <button 
+            onClick={handleLoginRedirect}
+            type="submit" className="mt-6 login-enter-btn">
               Sign in <ArrowRight size={16} className="ml-1.5" />
             </button>
           </form>

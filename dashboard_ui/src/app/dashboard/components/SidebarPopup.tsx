@@ -3,13 +3,17 @@
 import { useContext } from "react";
 import { LogOut, SquarePen, X } from "lucide-react";
 import { UIContext } from "@/context/UIContext";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/types/dashboard";
 
 export default function SidebarPopup() {
   const context = useContext(UIContext);
-  if (!context)
-    throw new Error("SidebarPopup must be used inside UIContextProvider");
+  if (!context) throw new Error("SidebarPopup must be used inside UIContextProvider");
 
+  const router = useRouter();
   const { isSidebarOpen, toggleSidebar } = context;
+
+  const handleLoginRedirect = () => router.push(ROUTES.LOGIN);
 
   return (
     <>
@@ -46,7 +50,9 @@ export default function SidebarPopup() {
             <SquarePen size={15} className="ml-1" />
           </button>
 
-          <button className="login-enter-btn h-9 bg-red-600! text-white! hover:bg-red-700! hover:text-gray-200!">
+          <button 
+          onClick={handleLoginRedirect}
+          className="login-enter-btn h-9 bg-red-600! text-white! hover:bg-red-700! hover:text-gray-200!">
             Logout
             <LogOut size={14.5} className="ml-1" />
           </button>
