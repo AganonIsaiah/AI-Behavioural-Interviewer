@@ -13,5 +13,5 @@ async def upload_resume(file: UploadFile = File(...)):
   
   return {
     "message" : "Resume parsed successfully",
-    "preview": parsed_text 
+    "resume_text": parsed_text
   }
